@@ -5,7 +5,7 @@ local ThemeManager = {} do
 
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
-		['TempleOS'] 		= { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"00ffe0","BackgroundColor":"141414","OutlineColor":"323232"}') }
+		['Default'] 		= { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"00ffe0","BackgroundColor":"141414","OutlineColor":"323232"}') }
 	}
 
 	function ThemeManager:ApplyTheme(theme)
@@ -40,7 +40,7 @@ local ThemeManager = {} do
 	end
 
 	function ThemeManager:LoadDefault()		
-		local theme = 'TempleOS'
+		local theme = 'Default'
 		local content = isfile(self.Folder .. '/themes/default.txt') and readfile(self.Folder .. '/themes/default.txt')
 
 		local isDefault = true
